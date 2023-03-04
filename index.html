@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>平衡小车项目介绍</title>
+    <meta name="description"
+        content="这里是网站介绍">
+    <meta name="keywords" content="这里是网站关键词">
+    <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
+    <link rel="stylesheet" type="text/css" href="./css/nutssss.css">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+    <div id="box">
+        <!-- 个人资料卡片 -->
+        <div class="meBox">
+            <!-- 头像 -->
+            <div class="headPhoto"></div>
+            <!-- 介绍 -->
+            <div class="meBox-title">
+                <p>基于PID控制的平衡小车设计</p>
+                <div class="fg"></div>
+            </div>
+            <div class="meBox-text">
+                <p><img src="./img/fish.png" alt="咸鱼" style="width: 20px; vertical-align: middle;">最新PCB版本号：230216B</p>
+                <p>PCB更新日志：</p>
+                <p>修改电机端子为PH2.00MM6PIN端口</p>
+                <p>修复M2电机供电线拐角90°的问题</p>
+                <p>优化部分布线</p>
+                <p>代码最后更新时间：230303A<img src="./img/002.png" alt="冰激凌" style="width: 15px; vertical-align: middle;"></p>
+            </div>
+            <!-- 两个按钮 -->
+            <div class="meBox-Button">
+                <a href="https://www.hgez6.top/posts/7823a927/">开发日志</a>
+                <a href="https://yun.hgez6.top/zh-CN/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E4%BA%91%E5%AD%98%E6%A1%A3/">个人云文档</a>
+            </div>
+        </div>
+
+        <!-- 伪终端介绍 -->
+        <div id="cmdBox">
+            <!-- 第一个终端 -->
+            <div class="cmd">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>lovexhj - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">root@nutssss</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">./links.sh</span>
+                    <p>其他资源：</p>
+                    <ul class="ul">
+                        <li><a href="https://e5.hgez6.top/zh-CN/PC%E8%BD%AF%E4%BB%B6/%E6%BA%90%E7%A0%81%E5%8C%85/">稳定版源码包</a></li>
+                        <li><a href="#">未完待续。。</a></li>
+                    </ul>
+                    <span style="color: rgb(0, 190, 0);">root@nutssss</span>
+                    <span style="color: blue;">~</span>
+                </div>
+            </div>
+            <!-- 第二个终端 -->
+            <div class="cmd cmd2">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>lovexhj - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">root@nutssss</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">./tianqi.sh</span>
+                    <br />
+                    <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tb&skin=pitaya" frameborder="0"
+                        width="350" height="24" allowtransparency="true"></iframe>
+                    <br />
+                    <span style="color: rgb(0, 190, 0);">root@nutssss</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">cat /project.txt</span>
+                    <p>该项目基于开源方案开发，目标是小车能维持基本平衡，并沿手机蓝牙调试器的摇杆方向行进。使用直立环PD，速度环PI，转速环PD，最后三环输出的PWM并级叠加。直立环PD作用是使小车俯仰角处于平衡位置，速度环作用是PI使小车能沿摇杆方向定性的前进/后退，转向环PD能使小车尽量保持直线行进，并保证小车能沿摇杆方向左/右转向。其中，速度环PI的程序使用离散化PID设计，用累加代替积分，并使用了一阶低通滤波算法以减少数据抖动增加控制的精确度</p>
+                    <p>最新参数：</p>
+                    <p>struct pid_arg PID = {                                    </p>
+                    <p>.Balance_Kp=-280 ,.Balance_Kd=-0.9,</p>
+                    <p>.Velocity_Kp=-130,.Velocity_Ki=-0.65,</p>
+                    <p>.Turn_Kp = 120,.Turn_Kd = 0.6,</p>
+                    <p>};</p>
+                    <p>Dead_Zone1=3200;Dead_Zone2=3250;Amplitude=4050;</p>
+                    <span style="color: rgb(0, 190, 0);">root@nutssss</span>
+                    <span style="color: blue;">~</span>
+                    <span style="color: rgb(39, 39, 39);">sudo rm -rf /BUGS/*</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer">
+        <p>© 2023 Hgez6 | <a href="#">230304</a></p>
+        <p>THEME MADE BY <a href="https://nutssss.cn/">Nutssss</a></p>
+    </div>
+</body>
+
+</html>
