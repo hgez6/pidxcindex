@@ -25,7 +25,7 @@ body {
 
 .meBox {
     float: left;
-    width: 25rem;
+    width: 20rem;
     height: 25rem;
     background-color: white;
     margin-top: 100px;
@@ -35,7 +35,7 @@ body {
 }
 
 .meBox:hover {
-    width: 26rem;
+    width: 21rem;
     height: 26rem;
     margin: 95px 0 0 -5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -83,13 +83,13 @@ body {
 }
 
 .meBox-title p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-right: .1em solid;
-    width: 21ch;
+    width: 22ch;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(20, end), blink-caret .3s step-end infinite alternate;
-    margin: -30px 0 0 90px;
+    margin: -30px 0 0 32px;
     transition: all 0.3s;
 }
 
@@ -144,7 +144,7 @@ body {
 .meBox-Button a {
     display: inline-block;
     float: left;
-    width: 200px;
+    width: 158px;
     height: 50px;
     margin-top: 13px;
     line-height: 50px;
@@ -159,7 +159,7 @@ body {
 }
 
 .meBox:hover .meBox-Button a {
-    width: 200px;
+    width: 165px;
     margin-top: 10px;
 }
 
@@ -322,13 +322,13 @@ body {
     }
 
     .meBox:hover {
-        width: 25rem;
+        width: 20rem;
         height: 25rem;
         margin: 105px auto 100px;
     }
 
     .meBox:hover .meBox-Button a {
-        width: 200px;
+        width: 158px;
         height: 50px;
         margin-top: 13px;
     }
@@ -366,7 +366,7 @@ body {
     }
 
     .meBox:hover .meBox-Button a {
-        width: 190px;
+        width: 150px;
         margin-top: 13px;
     }
 
@@ -386,7 +386,7 @@ body {
     }
 
     .meBox-Button a {
-        width: 190px;
+        width: 150px;
     }
 
     #cmdBox {
